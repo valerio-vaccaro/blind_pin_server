@@ -10,17 +10,18 @@ Green.
 
 ## To generate a new key
 
-`python -m venv -p python3 venv`
+After you clone the repository in the pinserver directory you can generate a new key with the following commands.
 
-`. venv/bin/activate`
-
-`pip install --require-hashes -r pinserver/requirements.txt`
-
-`python -m pinserver.generateserverkey`
+```
+python -m venv -p python3 venv
+. venv/bin/activate
+pip install --require-hashes -r pinserver/requirements.txt
+python -m pinserver.generateserverkey
+```
 
 ## Build the docker image
 
-docker build -f pinserver/Dockerfile pinserver/ -t dockerized_pinserver
+`docker build -f pinserver/Dockerfile pinserver/ -t dockerized_pinserver`
 
 ## Prepare the directory for all the pins
 
